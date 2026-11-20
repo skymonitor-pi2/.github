@@ -1,0 +1,43 @@
+name: Feature Request
+description: Propose a new capability, AI improvement, or HUD enhancement for SkyMonitor.
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: dropdown
+    id: component
+    attributes:
+      label: Target Module
+      options:
+        - Edge Node (edge/)
+        - Central AI Server (server/)
+        - Mission Control Frontend (frontend/)
+        - Shared Schemas & Projection (shared/)
+        - Training Pipeline (training/)
+        - Documentation & Tooling
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem Statement
+      description: What operational or engineering problem does this feature solve?
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed Solution
+      description: Describe the expected architecture, API contract, or UI behavior.
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance Criteria
+      description: How will we verify this feature is complete?
+      placeholder: |
+        - [ ] Unit tests added
+        - [ ] Documentation updated
